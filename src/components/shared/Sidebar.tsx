@@ -40,11 +40,11 @@ import {
   X,
   PanelRightOpen,
   PanelRightClose,
-  BookOpen
+  BookOpen,
+  Server
 } from 'lucide-react'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { GitHubStarsButton } from '../GithubLink'
 import SupportSheet from './SupportPanel'
 import { SidebarConfig } from './SidebarWrapper'
 import OrganizationSwitcher from '../projects/OrganisationSwitcher'
@@ -74,7 +74,8 @@ const ICONS = {
   History,
   Calendar,
   X,
-  BookOpen
+  BookOpen,
+  Server
 } as const
 
 interface NavigationItem {
@@ -522,7 +523,7 @@ export default function Sidebar({
                 }}
               >
                 <Image 
-                  src="/logo.png" 
+                  src="/superu_icon.png" 
                   alt="Whispey Logo" 
                   width={32} 
                   height={32} 
@@ -530,7 +531,7 @@ export default function Sidebar({
                 />
                 <div className="min-w-0">
                   <h1 className="text-sm font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
-                    Whispey
+                    agent bird view
                   </h1>
                 </div>
               </Link>
@@ -603,13 +604,6 @@ export default function Sidebar({
             </div>
           ))}
         </nav>
-
-        {/* GitHub Stars */}
-        {(!isCollapsed || isMobile) && (
-          <div className="px-3 mb-3">
-            <GitHubStarsButton />
-          </div>
-        )}
 
         {/* Conditional Pricing Box */}
         {pricingConfig?.showPricingBox && (!isCollapsed || isMobile) && (

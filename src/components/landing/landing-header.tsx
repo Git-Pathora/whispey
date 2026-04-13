@@ -212,7 +212,7 @@ function Header() {
                 {/* Enhanced glow effect on hover */}
                 <div className="absolute inset-0 rounded-xl bg-blue-500/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10"> 
-                  <Image src="/logo.png" alt="Logo" width={40} height={40} />
+                  <Image src="/superu_icon.png" alt="Logo" width={40} height={40} />
                 </div>
               </div>
               {/* Enhanced gradient text with new font */}

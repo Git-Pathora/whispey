@@ -92,7 +92,7 @@ export default function OnboardingPage() {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <Image 
-              src="/logo.png" 
+              src="/superu_icon.png" 
               alt="Whispey Logo" 
               width={48} 
               height={48}

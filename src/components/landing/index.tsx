@@ -364,7 +364,7 @@ export default function LandingPage() {
               <div className="col-span-1">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-8 h-8 rounded-lg flex items-center justify-center">
-                    <Image src="/logo.png" alt="Logo" width={40} height={40} />
+                    <Image src="/superu_icon.png" alt="Logo" width={40} height={40} />
                   </div>
                   <span className="text-xl font-bold gradient-text tracking-tight">Whispey</span>
                 </div>

@@ -25,7 +25,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Whispey - OSS LiveKit observability platform',
+  title: 'superU observability platform',
   description: 'An observability platform for all your agents built on LiveKit.',
   icons: {
     icon: '/favicon.ico',

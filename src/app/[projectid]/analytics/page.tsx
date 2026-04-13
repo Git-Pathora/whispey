@@ -101,7 +101,7 @@ export default function AnalyticsPage() {
           >
             <RefreshCw className="w-3.5 h-3.5" />
           </Button>
-          <a
+          {/* <a
             href={iframeSrc ?? '#'}
             target="_blank"
             rel="noopener noreferrer"
@@ -109,7 +109,7 @@ export default function AnalyticsPage() {
           >
             <ExternalLink className="w-3.5 h-3.5" />
             Open in Metabase
-          </a>
+          </a> */}
         </div>
       </div>
 

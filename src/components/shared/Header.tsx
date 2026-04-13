@@ -67,7 +67,7 @@ function Header({ breadcrumb, isLoading }: HeaderProps) {
           {/* Logo & Brand Section */}
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-3 group">
-              <Image src="/logo.png" alt="Pype AI Logo" width={48} height={48} className="group-hover:scale-110 transition-transform duration-200" />
+              <Image src="/superu_icon.png" alt="Pype AI Logo" width={48} height={48} className="group-hover:scale-110 transition-transform duration-200" />
               <div>
                 <h1 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200 tracking-tight">
                   Whispey

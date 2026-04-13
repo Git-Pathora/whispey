@@ -23,7 +23,7 @@ export default function AuthPage({ redirectUrl }: AuthPageProps) {
             {/* Logo */}
             <div className="flex items-center space-x-3 mb-12">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                <Image src="/logo.png" alt="Pype AI Logo" width={32} height={32} />
+                <Image src="/superu_icon.png" alt="Pype AI Logo" width={32} height={32} />
               </div>
               <span className="text-2xl font-bold text-white">Whispey</span>
             </div>
@@ -80,7 +80,7 @@ export default function AuthPage({ redirectUrl }: AuthPageProps) {
           <div className="lg:hidden text-center">
             <div className="inline-flex items-center space-x-3">
               <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center border">
-                <Image src="/logo.png" alt="Pype AI Logo" width={32} height={32} />
+                <Image src="/superu_icon.png" alt="Pype AI Logo" width={32} height={32} />
               </div>
               <span className="text-2xl font-bold text-slate-900">Whispey</span>
             </div>
