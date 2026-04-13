@@ -150,7 +150,9 @@ CREATE TABLE public.pype_voice_email_project_mapping (
     added_by_clerk_id text,
     created_at timestamp with time zone DEFAULT now(),
     clerk_id text,
-    is_active boolean
+    is_active boolean,
+    invite_token uuid DEFAULT gen_random_uuid(),
+    invite_sent_at timestamp with time zone
 );
 
 CREATE TABLE public.pype_voice_api_keys (
@@ -362,6 +364,24 @@ BEGIN
         WHERE table_schema = 'public' AND table_name = 'pype_voice_call_logs' AND column_name = 'wcall_event'
     ) THEN
         ALTER TABLE public.pype_voice_call_logs ADD COLUMN wcall_event varchar DEFAULT 'call_ended';
+    END IF;
+END $$;
+
+-- Add invite_token and invite_sent_at to email_project_mapping if missing
+DO $$
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1 FROM information_schema.columns
+        WHERE table_schema = 'public' AND table_name = 'pype_voice_email_project_mapping' AND column_name = 'invite_token'
+    ) THEN
+        ALTER TABLE public.pype_voice_email_project_mapping ADD COLUMN invite_token uuid DEFAULT gen_random_uuid();
+    END IF;
+
+    IF NOT EXISTS (
+        SELECT 1 FROM information_schema.columns
+        WHERE table_schema = 'public' AND table_name = 'pype_voice_email_project_mapping' AND column_name = 'invite_sent_at'
+    ) THEN
+        ALTER TABLE public.pype_voice_email_project_mapping ADD COLUMN invite_sent_at timestamp with time zone;
     END IF;
 END $$;
 
